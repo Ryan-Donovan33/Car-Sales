@@ -5,7 +5,7 @@ import Header from './components/Header';
 import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
-import { dispatch } from 'rxjs/internal/observable/range';
+// import { dispatch } from 'rxjs/internal/observable/range';
 
 import { addFeature, removeFeature } from './actions/Features';
 
