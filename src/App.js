@@ -9,7 +9,10 @@ import Total from './components/Total';
 
 import { addFeature, removeFeature } from './actions/Features';
 
+// passed in objects so I could pass them into the other compononets and this allowed me to use them in their individual components
 const App = ({ additionalFeatures, car, additionalPrice, addFeature, removeFeature }) => {
+	// removed the state and added it into my reducer as the initial state
+
 	// const state = {
 	// additionalPrice: 0,
 	// car: {
@@ -26,6 +29,8 @@ const App = ({ additionalFeatures, car, additionalPrice, addFeature, removeFeatu
 	//   { id: 4, name: 'Rear spoiler', price: 250 }
 	// ]
 	// };
+
+	// removed the dispatch because I created a mapsToDispatch below that does this for me
 
 	// const removeFeature = item => {
 	//   // dispatch an action here to remove an item
@@ -53,6 +58,7 @@ const App = ({ additionalFeatures, car, additionalPrice, addFeature, removeFeatu
 
 const mapDispatchToProps = { addFeature, removeFeature };
 
+// allowing myself to create these as props and them pass them.
 const mapStateToProps = (state) => {
 	return {
 		additionalPrice: state.additionalPrice,

@@ -19,6 +19,7 @@ const initialState = {
 export const featureReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case ADD_FEATURE:
+			// taking the payload and adding it into the features in the car and filtering through to make sure the ID doesn't match anything current
 			return {
 				...state,
 				car: {
@@ -29,6 +30,8 @@ export const featureReducer = (state = initialState, action) => {
 				additionalFeatures: state.additionalFeatures.filter((feature) => feature.id !== action.payload.id)
 			};
 
+		// the logic is just flipped from the add feature
+		// moving the payload from the feature and adding it back to addtional features
 		case REMOVE_FEATURE:
 			return {
 				...state,

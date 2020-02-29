@@ -9,6 +9,9 @@ import { featureReducer } from './reducers/reducers';
 import 'bulma/css/bulma.css';
 import './styles.scss';
 
+// make sure to create the store and pass in the reducer.
+// Dont forget to wrap <App/>
+
 const store = createStore(featureReducer);
 
 const rootElement = document.getElementById('root');
